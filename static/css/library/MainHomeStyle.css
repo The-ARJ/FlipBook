@@ -310,7 +310,7 @@ body {
     }
 
     .md-text-left {
-        text-align: right;
+        text-align: center;
     }
 
     .md-mx-initial {
@@ -450,13 +450,13 @@ body {
 
     position: relative;
     /*background: var(--bg-cover) no-repeat;*/
-    background-position-x: center;
+    background-position-x: right;
     /*z-index: 1;*/
 }
 
 #site-main .banner-area .banner-title {
     height: 95vh;
-    padding-top: 12em;
+    padding-top: 5em;
 
 }
 
@@ -466,7 +466,7 @@ body {
 /* ------------------- Footer Style ------------------------ */
 #footer {
     border-top: 1px solid lightgray;
-    margin-top: 1em;
+    margin-top: 25em;
 
 }
 
