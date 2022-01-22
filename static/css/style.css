@@ -429,6 +429,7 @@ body {
     color: aqua;
 }
 
+
 #nav .flex-initial ul button {
 
     display: none;
@@ -489,7 +490,9 @@ body {
     color: white;
     font-family: var(--font-poppins);
 }
-
+.text-footer-center {
+    text-align: center;
+}
 #footer .grid input.subscribe-text:focus {
     border: none;
     outline: none;
