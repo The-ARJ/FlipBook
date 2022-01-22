@@ -2,7 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* ------------------- Variables ------------------------ */
+
+body {
+    background-color:#3a3b3c;
+
+}
+
+/* ------------------- Variables Declaration------------------------ */
 
 :root {
     /* text colors */
@@ -27,7 +33,7 @@ ul {
 }
 
 
-/* ------------------- /Variables ------------------------ */
+/* ------------------- /Variables declaration------------------------ */
 
 /* ------------------- Global Classes ------------------------ */
 
@@ -151,7 +157,6 @@ ul {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: white;
 }
 
 .h1 {
@@ -218,12 +223,12 @@ ul {
 }
 
 .link {
-    color: #1A3760D4;
+    color: whitesmoke;
     font-weight: bold;
 }
 
 .link:hover {
-    color: purple;
+    color: coral;
 }
 
 .btn-virtual {
@@ -516,7 +521,7 @@ body {
     left: 0;
     height: 100%;
     width: 260px;
-        background-color:#3a3b3c;
+        background-color:#555555;
 
     z-index: 1;
     transition: all 0.5s ease;
@@ -584,6 +589,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+.icon_color{
+
 }
 
 .sidebar.close .nav-links li .icon-link {
@@ -618,10 +627,9 @@ body {
 .sidebar .nav-links li a .link_name {
 
     font-size: 20px;
-    font-weight: 400;
     margin-top: 30px;
     margin-bottom: 30px;
-    color: white;
+    color: whitesmoke;
     transition: all 0.4s ease;
 }
 
@@ -789,7 +797,6 @@ body {
 }
 
 .home-section .home-content .left-arrow {
-    /*hello*/
     margin: 1px;
     cursor: pointer;
 
@@ -829,11 +836,7 @@ body {
     font-family: "Nunito", sans-serif;
 }
 
-body {
-        background-color:#555555;
 
-
-}
 
 img {
     display: block;

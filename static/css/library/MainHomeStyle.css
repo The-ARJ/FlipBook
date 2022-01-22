@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* ------------------- Variables ------------------------ */
-
+body{
+     background-color:#555555;
+}
 :root {
     /* text colors */
     --box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 50%);
@@ -9,11 +11,6 @@
     /* font family */
     --font-poppins: "Poppins", 'sans-serif';
 
-    /* images */
-    /*--bg-cover : url('../../../OceanofBooks/static/assets/ocean.jpg');*/
-    /*--bg-image1: url('../../../OceanofBooks/static/assets/img1.png');*/
-    /*--bg-image2: url('../../../OceanofBooks/static/assets/img2.png');*/
-    /*--bg-image3: url('../../../OceanofBooks/static/assets/img3.png');*/
 }
 
 * > * {
@@ -50,7 +47,7 @@ ul {
 }
 
 .text-light {
-    color: #1A3760D4;
+    color:white;
 }
 
 .text-white {
@@ -58,12 +55,16 @@ ul {
 }
 
 .text-gray {
-    color: gray;
+    color:coral;
+}
+.text-footer {
+    color:lightskyblue;
 }
 
 .text-col {
-    color: darkcyan;
+    color:coral;
 }
+
 
 
 .font-poppins {
@@ -97,7 +98,7 @@ ul {
 }
 
 .font-bold {
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .flex {
@@ -149,18 +150,21 @@ ul {
     background-image: linear-gradient(to right, #ff9966, #ff5e62);
     font-size: 40px;
 }
-.btn-toggle{
+
+.btn-toggle {
     border-radius: 20px;
     border: none;
     background-color: transparent;
     cursor: pointer;
     color: white;
 }
-.h1{
+
+.h1 {
 
     font-size: 200px;
     z-index: -1;
 }
+
 .btn-go {
     border-radius: 20px;
     padding: 0.5em;
@@ -175,7 +179,8 @@ ul {
     background-image: linear-gradient(to right, #ff9966, #ff5e62);
 
 }
-.btn-go:hover{
+
+.btn-go:hover {
     background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
 }
 
@@ -184,7 +189,7 @@ ul {
 }
 
 .container-fluid {
-    width: 98%;
+    width: 100%;
 }
 
 .mx-auto {
@@ -218,12 +223,12 @@ ul {
 }
 
 .link {
-    color: #1A3760D4;
+        color: whitesmoke;
     font-weight: bold;
 }
 
 .link:hover {
-    color: purple;
+    color: coral;
 }
 
 .btn-virtual {
@@ -239,12 +244,12 @@ ul {
     font-family: var(--font-poppins);
     font-weight: bold;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     animation: fadeIn 1s;
-background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 
 }
-
 
 
 /*.bg-cover{*/
@@ -322,7 +327,7 @@ body {
     }
 
     .md-text-dark {
-        color:  #1A3760D4;
+        color: white;
     }
 
 }
@@ -386,12 +391,12 @@ body {
 
 /* ------------------- Navigation Style ------------------------ */
 #nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 1.5rem;
-    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    background-color: #1d1b31;
     flex-direction: column;
     z-index: 1;
 
@@ -401,7 +406,7 @@ body {
 #nav .collapse {
     /*background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);*/
     background: transparent;
-    max-height: 0px;
+    max-height: 0;
     overflow-y: hidden;
     transition: all 0.9s ease;
 }
@@ -446,8 +451,6 @@ body {
 /* ------------------- Banner area Style ------------------------ */
 
 #site-main {
-    width: 100%;
-
     position: relative;
     /*background: var(--bg-cover) no-repeat;*/
     background-position-x: right;
@@ -455,6 +458,7 @@ body {
 }
 
 #site-main .banner-area .banner-title {
+
     height: 95vh;
     padding-top: 5em;
 
@@ -467,6 +471,8 @@ body {
 #footer {
     border-top: 1px solid lightgray;
     margin-top: 25em;
+
+     background-color:#555555;
 
 }
 
