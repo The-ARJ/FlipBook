@@ -11,7 +11,7 @@ window.onload = function digital_fn(){
         // console.log(toggle)
     });
 
-    // mansonry js
+    // masonry js
     let grid = document.querySelector("#site-main .recent-work-area .images-flex");
 
     let msnry = new Masonry(grid, {
