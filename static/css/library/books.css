@@ -4,8 +4,36 @@
 
 
 body {
-    background-color: #3a3b3c;
+    background-color:#3a3b3c;
+
 }
+
+/* ------------------- Variables Declaration------------------------ */
+
+:root {
+    /* text colors */
+    --box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 50%);
+
+    /* font family */
+    --font-poppins: "Poppins", 'sans-serif';
+}
+
+* > * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* ------------------- /Variables declaration------------------------ */
 
 /* ------------------- Global Classes ------------------------ */
 
@@ -362,7 +390,7 @@ body {
     left: 0;
     width: 100vw;
     padding: 1rem 1.5rem;
-    background-color: #1d1b31;
+           background-color:#1d1b31;
 
     flex-direction: column;
     z-index: 10;
@@ -493,7 +521,7 @@ body {
     left: 0;
     height: 100%;
     width: 260px;
-    background-color: #555555;
+        background-color:#555555;
 
     z-index: 1;
     transition: all 0.5s ease;
@@ -563,8 +591,7 @@ body {
     justify-content: space-between;
 
 }
-
-.icon_color {
+.icon_color{
 
 }
 
@@ -765,7 +792,7 @@ body {
 .home-section .home-content .left-arrow,
 .home-section .home-content .text {
     /*color: black;*/
-    fill: white;
+    fill: #717171;
     font-size: 40px;
 }
 
@@ -792,13 +819,13 @@ body {
     box-shadow: 1px 1px 10px 1px gray;
     border-radius: 25px;
     transition: 0.3s;
-    /* 5px rounded corners */
+       /* 5px rounded corners */
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     cursor: pointer;
-    box-shadow: 0 2px 15px 2px gold;
+    box-shadow: 0 2px 20px 5px gold;
 }
 
 /* Add some padding inside the card container */
@@ -809,6 +836,7 @@ body {
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
 }
+
 
 
 img {
@@ -834,7 +862,7 @@ img {
     padding-left: 30px;
 }
 
-.card_inner {
+ .card_inner {
     border-radius: 20px;
     background: #18191a;
 }
@@ -864,18 +892,17 @@ img {
 }
 
 .cards_wrap .card_bottom .card_creator {
-    padding-top: 5px;
+    /*padding-top: 10px;*/
     text-align: center;
     color: #d95626;
     font-weight: bold;
-    text-transform: uppercase;
+text-transform: uppercase;
 
 }
 
 @media (max-width: 1024px) {
     .cards_wrap .card_item {
         width: 33.3%;
-
     }
 }
 
@@ -891,10 +918,7 @@ img {
 
     }
 }
-
 img {
-    border-radius: 8px 8px 0 0;
-}
-.imgsize{
-    height: 20%;
+  border-radius: 8px 8px 0 0;
+
 }

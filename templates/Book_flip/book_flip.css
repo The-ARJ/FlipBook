@@ -1,0 +1,217 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    background-color: #dac400;
+}
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin-top: 700px;
+    /*margin-left: 100px;*/
+    /*margin-right: 100px;*/
+    /*padding-left: 100px;*/
+    /*padding-right: 100px;*/
+    cursor: pointer;
+    transition: transform 0.5s;
+    z-index: 10;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+
+}
+
+/* Book */
+.book {
+    width: 500px;
+    height: 700px;
+    position: relative;
+    transition: transform 0.5s;
+
+    /*color: #717171;*/
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+    border-radius: 30px;
+    /*color: #717171 ;*/
+}
+
+.front {
+    backface-visibility: hidden;
+    border-left: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+}
+.backVisibility{
+
+}
+.Title_topic {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.content {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 13px;
+    /*font-weight: bold;*/
+    font-family: Poppins,sans-serif;
+    color: black;
+
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:darkkhaki;
+    transform-origin: left;
+    transition: transform 0.5s;
+    border-color: whitesmoke;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+
+    z-index: 0;
+    /*background-color: #18191a;*/
+    border-radius: 30px;
+}
+
+.front {
+    /*background-color: #18191a;*/
+    border-radius: 30px;
+}
+
+.front-content {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+
+}
+
+.back-content {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+}
+
+
+/*noinspection ALL*/
+.back-content {
+    transform: rotateY(180deg)
+
+}
+
+/* Paper Flipped */
+/*noinspection ALL*/
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 3;
+
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* Customization */
+
+.book-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.cover-img {
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+}
+
+@media (max-width: 500px){
+    .book {
+    width: 180px;
+    height:500px;
+    position: relative;
+    transition: transform 0.5s;
+    /*color: #717171;*/
+}
+    .content {
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 8px;
+    /*font-weight: bold;*/
+    font-family: Poppins,sans-serif;
+    color: black;
+}.cover-img {
+    width: 300px;
+    height: 500px;
+    border-radius: 30px;
+}
+    button {
+    border: none;
+    background-color: transparent;
+    margin-top: 500px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    z-index: 10;
+}
+}
+
