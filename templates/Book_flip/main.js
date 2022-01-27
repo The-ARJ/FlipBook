@@ -51,7 +51,7 @@ function goNext() {
                 paper3.style.zIndex = 3;
                 break;
             default: 
-                throw new Error("unkown state");    
+                throw new Error("unknown state");
         }
 
         currentState++;
@@ -73,7 +73,7 @@ function goPrevious() {
             case 4: 
                 openBook()
                 paper3.classList.remove("flipped");
-                paper3.style.zIndex = 1;
+                paper3.style.zIndex = -1;
                 break;
         }
 
