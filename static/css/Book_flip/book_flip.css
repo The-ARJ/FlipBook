@@ -18,8 +18,9 @@
 
 button {
     background-color: transparent;
-    border-color: transparent;
+    border-color: transparent;cursor: pointer;    color: white;
 }
+
 
 .cont {
     position: fixed;
@@ -29,15 +30,18 @@ button {
 
 .btnn {
     display: inline-flex;
+    cursor: pointer;
 
 }
+
 
 button:focus {
     outline: none;
+
 }
 
 button:hover i {
-    color: rgb(102, 102, 102);
+    color: #26a0d9;
 }
 
 
