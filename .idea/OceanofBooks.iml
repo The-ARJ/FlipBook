@@ -11,5 +11,9 @@
     <orderEntry type="library" name="masonry" level="application" />
     <orderEntry type="library" name="rellax" level="application" />
     <orderEntry type="library" name="boxicons" level="application" />
+    <orderEntry type="library" name="animate.css" level="application" />
+    <orderEntry type="library" name="boxicons" level="application" />
+    <orderEntry type="library" name="masonry" level="application" />
+    <orderEntry type="library" name="rellax" level="application" />
   </component>
 </module>

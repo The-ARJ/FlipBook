@@ -2,7 +2,8 @@
 
 /* ------------------- Variables ------------------------ */
 body{
-     background-color:#555555;
+
+    background-color:#3a3b3c;
 }
 :root {
     /* text colors */
@@ -27,7 +28,10 @@ ul {
     list-style-type: none;
 }
 
+li{
 
+    list-style-type: none;
+}
 /* ------------------- /Variables ------------------------ */
 
 /* ------------------- Global Classes ------------------------ */
@@ -68,7 +72,7 @@ ul {
 
 
 .font-poppins {
-    font-family: var(--font-poppins);
+    font-family: "Nunito", sans-serif;
 }
 
 .text-center {
@@ -134,7 +138,7 @@ ul {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 50px 0 rgb(0 0 0 / 10%);
     color: white;
     background-image: linear-gradient(to right, #ff512f, #f09819);
 
@@ -177,6 +181,7 @@ ul {
     box-shadow: var(--box-shadow);
     color: white;
     background-image: linear-gradient(to right, #ff9966, #ff5e62);
+
 
 }
 
