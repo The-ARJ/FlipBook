@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocean of Books</title>
-    <link rel="icon" type="image/x-icon" href="/static/assets/favicon/reading.png">
-
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="/static/css/library/MainHomeStyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Cards</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="./.././../static/css/style.css" />
+    <link rel="stylesheet" href="../../static/css/slide.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/static/css/library/particle.css">
-    <link rel="stylesheet" href="/static/css/library/MainHomeCarousel.css">
+    <link rel="stylesheet" href="../../static/css/style2.css">
+
 
 </head>
+
 <body>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Header Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -35,13 +34,13 @@
         <div class="collapse flex-grow">
             <ul class="flex">
                 <li>
-                    <a href="#" class="link">Home</a>
+                    <a href="MainHome.html" class="link">Home</a>
                 </li>
                 <li>
                     <a href="Books.html" class="link">Books</a>
                 </li>
                 <li>
-                    <a href="#" class="link">About Us</a>
+                    <a href="aboutus.html" class="link">About Us</a>
                 </li>
                 <li>
                     <a href="#" class="link">Contact Us</a>
@@ -61,169 +60,150 @@
 </header>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~  /Header Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+<div class="app">
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Main Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<main id="site-main">
+    <div class="cardList">
 
+        <button class="cardList__btn btn btn--left">
+            <div class="icon">
+                <svg>
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </div>
+        </button>
 
-    <div id="particle-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+        <div class="cards__wrapper">
+            <div class="card current--card">
+                <a href="./../books/ELON MUSK.html">
+
+                <div class="card__image">
+                    <img src="./.././../static/assets/Front%20Cover/25541028.jpg" alt="" />
+                </div>
+                </a>
+            </div>
+
+            <div class="card next--card">
+                <div class="card__image">
+                    <img src="./.././../static/assets/Front%20Cover/57282218.jpg" alt="" />
+                </div>
+            </div>
+
+            <div class="card previous--card">
+                <div class="card__image">
+                    <img src="./.././../static/assets/Front%20Cover/56914101.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <button class="cardList__btn btn btn--right">
+            <div class="icon">
+                <svg>
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <div class="infoList">
+        <div class="info__wrapper">
+
+            <div class="info current--info">
+                <a href="./../books/ELON%20MUSK.html">
+                <h4 class="text location">Elon Musk</h4>
+                <p class="text description">BY ASHLEE VANCE</p>
+                </a>
+
+            </div>
+
+            <div class="info next--info">
+                <a href="./../books/LORE%20OLYMPUS%20VOLUME%20ONE.html">
+                <h4 class="text location">LORE OLYMPUS: VOLUME ONE</h4>
+                    <p class="text description">BY RACHEL SMYTHE</p></a>
+            </div>
+
+            <div class="info previous--info">
+                <a href="./../books/THE%20HILL%20WE%20CLIMB.html">
+
+                <h4 class="text location">THE HILL WE CLIMB
+                </h4>
+                    <p class="text description">BY AMANDA GORMAN</p></a>
+            </div>
+        </div>
     </div>
 
 
-    <!-- banner area -->
-    <section class="banner-area font-poppins">
-        <div class="container mx-auto banner-title">
-            <div class="title text-center md-text-left">
-                <span class="d-inline  btn-virtual bg-gradient-peach text-col animate__animated animate__fadeInUp">Today's Top Picks</span>
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
-
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides borderimg fade">
-                        <!--    <img src="/static/assets/Front Cover/book6.jpg" style="width:500px" alt="">-->
-                        <img src="https://source.unsplash.com/1400x900/?books,novel" style="width: 100%" alt="book">
-
-
-                    </div>
-
-                    <div class="mySlides borderimg fade">
-                        <!--    <img src="/static/assets/Front Cover/book2.jpg" style="width:100%" alt="">-->
-                        <img src="https://source.unsplash.com/1400x900/?novel,books" style="width: 100%" alt="book">
-
-                    </div>
-
-                    <div class="mySlides borderimg fade">
-                        <!--    <img src="/static/assets/Front Cover/book9.jpg" style="width:50% ;height: 20%" alt="">-->
-                        <img src="https://source.unsplash.com/1400x900/?novels" style="width: 100%" alt="book">
-
-                    </div>
-
-
-                </div>
-
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="function currentSlide(number) {
-
-                    }
-                    currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-
-                <div class="py-2 branding text-light md-text-dark text-lg sm-text-xl font-bold">
-                    <span class="d-block animate__animated animate__fadeInDown animate__faster">Explore, Find & </span>
-                    <span class="d-block animate__animated animate__fadeInDown animate__fast">Start Reading</span>
-                </div>
-                <div class="py-5 animate__animated animate__fadeInUp">
-                    <p class="text-gray">We provide thousands of books on your finger tips</p>
-                    <p class="text-gray">We Hope You Liked and Invite your friends </p>
-                </div>
-                <div class="py-5 animate__animated animate__fadeInUp">
-                    <a href="Books.html">
-                        <button class="btn btn-primary signin">Explore</button>
-                    </a>
-                </div>
-            </div>
-
+    <div class="app__bg">
+        <div class="app__bg__image current--image">
+            <img src="./.././../static/assets/background/1.jpg" alt="" />
         </div>
-    </section>
+        <div class="app__bg__image next--image">
+            <img src="./.././../static/assets/background/3.jpg" alt="" />
+        </div>
+        <div class="app__bg__image previous--image">
+            <img src="./.././../static/assets/background/2.jpg" alt="" />
+        </div>
+    </div>
+</div>
 
-</main>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ /Main Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
 
-<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Footer Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<footer id="footer">
+<div class="loading__wrapper">
+    <div class="loader--text">Welcome...</div>
+    <div class="loader">
+        <span></span>
+    </div>
+</div>
+
+
+
+<svg class="icons" style="display: none;">
+    <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='328 112 184 256 328 400'
+                  style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+    </symbol>
+    <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='184 112 328 256 184 400'
+                  style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+    </symbol>
+
+</svg>
+
+<!--@@@@@@@@@@@@@@@@@@@@@@Footer@@@@@@@@@@@@-->
+
+<footer id="footer2">
     <section class="container mx-auto py-10">
-        <div class="grid md-cols-2 lg-cols-4 font-poppins">
-            <div class="text-footer text-center md-text-left">
-                    <span>
-                        44600 Kathmandu,Nepal
-                    </span>
-                <span class="d-block">(+977) 9818984104</span>
-                <span class="text-red">joshiaayus871@gmail.com</span>
-            </div>
-            <div class="text-footer text-center md-text-left">
-                <h3 class="text-dark">About</h3>
-                <div class="py-5">
-                    <li>
-                        <a href="aboutus.html" class="text-footer">About Us</a>
-                    </li>
 
+        <!-- @@@@@@@@@@@@  Footer Section @@@@@@@@@@@@@ -->
+        <footer>
+            <div class="footwave">
+                <div class="ocean">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
                 </div>
             </div>
-            <div class="text-footer text-center md-text-left">
-                <h3 class="text-dark">Contact Us</h3>
-                <div class="py-5">
-                    <li>
-                        <a href="aboutus.html" class="text-footer">Contact Us</a>
-                    </li>
+            <ul class="social_icon">
 
-                </div>
-            </div>
-
-            <div class="text-footer text-center md-text-left">
-                <h3 class="text-dark">Newsletter</h3>
-                <p>
-                    Subscribe us to get the <br>
-                    latest news & updates.
-                </p>
-
-                <div class="flex py-6">
-                    <label>
-                        <input type="text" class="email" placeholder="Enter Email Address">
-                    </label>
-                    <button class="btn btn-go ">Go</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyrights font-poppins">
-            <p class="text-gray py-5 text-center">
-                © 2022 Aayush Raj Joshi. All rights reserved.
-            </p>
-        </div>
-
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a> </li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a> </li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a> </li>
+            </ul>
+            <ul class="menu">
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">About</a> </li>
+                <li><a href="#">Services</a> </li>
+                <li><a href="#">Team</a> </li>
+                <li><a href="#">Contact</a> </li>
+            </ul>
+            <p> @2022 Ocean Of Books| Aayush Raj Joshi | All Rights Reserved</p>
+        </footer>
     </section>
 </footer>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  /Footer Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-
-<!-- scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js"
-        integrity="sha512-coKEwkkVJR6lO1aL/rJeVFojNKG1DRNbAfuxcvFC98W9TYBO9TQIVFXiHBBx6dRL9+effSNEYIr/5vLe5HENVg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
-        integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--@@@@@@@@@@@@@@@@@@@@@@Script@@@@@@@@@@@@@@@@@@@-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+<script type="text/javascript" src="../../static/js/slide.js"></script>
 <script src="/static/js/MainHome.js"></script>
-<script src="/static/js/MainHomeCarousel.js"></script>
 </body>
 </html>
