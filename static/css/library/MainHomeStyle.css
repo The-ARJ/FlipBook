@@ -2,8 +2,9 @@
 
 /* ------------------- Variables ------------------------ */
 body{
+    background-color: #1d1b31;
+    overflow-x: hidden;
 
-    background-color:#3a3b3c;
 }
 :root {
     /* text colors */
@@ -143,7 +144,7 @@ li{
     background-image: linear-gradient(to right, #ff512f, #f09819);
 
 }
-
+/*Explore Button*/
 .signin {
     border: none;
     background-color: transparent;
@@ -152,7 +153,8 @@ li{
     box-shadow: var(--box-shadow);
     color: white;
     background-image: linear-gradient(to right, #ff9966, #ff5e62);
-    font-size: 40px;
+    font-size: 30px;
+    z-index: 100;
 }
 
 .btn-toggle {
@@ -474,10 +476,10 @@ body {
 
 /* ------------------- Footer Style ------------------------ */
 #footer {
-    border-top: 1px solid lightgray;
+    border-top: 1px ;
     margin-top: 25em;
 
-     background-color:#555555;
+     /*background-color:#555555;*/
 
 }
 
