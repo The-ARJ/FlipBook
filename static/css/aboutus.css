@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
 .wrapper{
     position: relative;
     display: flex;
@@ -63,7 +65,7 @@
 }
 .text-container a:hover{
     background-color: transparent;
-    color: black;
+    color: white;
     border: 2px solid rebeccapurple;
 }
 @media screen and (max-width: 1600px){
