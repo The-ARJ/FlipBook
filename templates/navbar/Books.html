@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/static/css/library/MainHomeStyle.css">
     <link rel="icon" type="image/x-icon" href="/static/assets/favicon/reading.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="./.././../static/css/searchbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocean of Books</title>
 </head>
@@ -42,13 +43,66 @@
                     <a href="#" class="link">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#" class="link">Dashboard</a>
-                </li>
-                <li>
                     <button class="btn btn-primary signup">Account</button>
                 </li>
+
             </ul>
 
+
+        </div>
+
+        <div class="searchbar">
+            <!--        @@@@@@@@@@@@@@@@@@search bar@@@@@@@@@@@@@-->
+            <div class="search-box">
+                <label for="myInput"></label><input type="text" class="dropbtn" placeholder="Search Books" id="myInput" onInput="filterFunction()">
+                <div id="myDropdown" class="dropdown-content">
+                    <li class="lii">
+                    <a href="./../books/Stevejobs.html">STEVE JOBS
+                        BY WALTER ISAACSON</a></li>
+                    <a href="./../books/TheGreatGatsby.html">THE GREAT GATSBY
+                        BY F. SCOTT FITZGERALD</a>
+                    <a href="./../books/EINSTEIN.html">EINSTEIN
+                        BY WALTER ISSACSON</a>
+                    <a href="./../books/THE%20DIARY%20OF%20A%20YOUNG%20GIRL.html">THE DIARY OF A YOUNG GIRL
+                        BY ANNIE FRANK</a>
+                    <a href="./../books/ELON%20MUSK.html">ELON MUSK
+                        BY ASHLEE VANCE</a>
+                    <a href="./../books/MALIBU%20RISING.html">MALIBU RISING
+                        BY TAYLOR JENKINS REID</a>
+                    <a href="./../books/THE%20LAST%20THING%20HE%20TOLD%20ME.html">THE LAST THING HE TOLD ME
+                        BY LAURA DAVE</a>
+                    <a href="./../books/BEAUTIFUL%20WORLD,%20WHERE%20ARE%20YOU.html">BEAUTIFUL WORLD, WHERE ARE YOU
+                        BY SALLY ROONEY</a>
+                    <a href="./../books/PROJECT%20HAIL%20MARY.html">PROJECT HAIL MARY
+                        BY ANDY WEIR</a>
+                    <a href="./../books/LORE%20OLYMPUS%20VOLUME%20ONE.html">LORE OLYMPUS: VOLUME ONE
+                        BY RACHEL SMYTHE</a>
+                    <a href="./../books/THE%20ANTHROPOCENE%20REVIEWED.html">THE ANTHROPOCENE REVIEWED
+                        BY JOHN GREEN</a>
+                    <a href="./../books/DAUGHTER%20OF%20THE%20DEEP.html">DAUGHTER OF THE DEEP
+                        BY RICK RIORDAN</a>
+                    <a href="./../books/THE%20HILL%20WE%20CLIMB.html">THE HILL WE CLIMB
+                        BY AMANDA GORMAN</a>
+                    <a href="./../books/RULE%20OF%20WOLVES.html">RULE OF WOLVES
+                        BY LEIGGH BARDUGOO</a>
+                    <a href="./../books/EMPIRE%20OF%20PAIN.html">EMPIRE OF PAIN
+                        BY PATRICK RADDENN</a>
+                </div>
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cancel-icon">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div id="noMatches" class="dropdown-content">
+                    <a href="#">No Matches</a>
+                    <div class="search-data">
+                    </div>
+
+
+                </div>
+            </div>
         </div>
 
 
@@ -463,6 +517,8 @@
 <script src="/static/js/main.js"></script>
 <script src="/static/js/boook.js"></script>
 <script src="/static/js/button.js"></script>
+<script src="../../static/js/search.js"></script>
+
 
 </body>
 </html>
