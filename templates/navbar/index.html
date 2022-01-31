@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/static/css/library/particle.css">
-    <link rel="stylesheet" href="/static/css/library/bubble.css">
     <link rel="stylesheet" href="/static/css/library/carousel.css">
     <link rel="stylesheet" href="../../static/css/style2.css">
+    <link rel="stylesheet" href="../../static/css/loginsignup.css">
 
 
     <!-- stylesheet -->
@@ -39,10 +39,10 @@
                         <a href="index.html" class="link">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="link" >About Us</a>
+                        <a href="aboutus.html" class="link" >About Us</a>
                     </li>
                     <li>
-                        <a href="#" class="link">Contact</a>
+                        <a href="contact.html" class="link">Contact</a>
                     </li>
                     <li>
                     <button class="btn btn-primary signup">Sign Up</button>
@@ -59,7 +59,6 @@
 
 
      <!-- @@@@@@@@@@@@  Main Section @@@@@@@@@@@@@ -->
-    <main id="site-main">
 
 
         <div id="particle-container">
@@ -93,41 +92,138 @@
         </div>
 
 <!-- Slideshow container -->
-<div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-<!--    <img src="/static/assets/Front Cover/book6.jpg" style="width:500px" alt="">-->
-      <img src="https://source.unsplash.com/1400x1050/?book" style="width: 100%" alt="book">
+    <main id="main">
 
+        <div class="box">
+            <div class="inner-box">
+                <div class="forms-wrap">
+                    <form action="index.html" autocomplete="off" class="sign-in-form">
+                        <div class="logo">
+                            <img src="/static/assets/favicon/reading.png" alt="Ocean Of Books" />
+                            <h4>Ocean of Books</h4>
+                        </div>
 
-  </div>
+                        <div class="heading">
+                            <h2>Welcome Back</h2>
+                            <h6>Not registred yet?</h6>
+                            <a href="#" class="toggle">Sign up</a>
+                        </div>
 
-  <div class="mySlides fade">
-<!--    <img src="/static/assets/Front Cover/book2.jpg" style="width:100%" alt="">-->
-            <img src="https://source.unsplash.com/1400x1050/?books" style="width: 100%" alt="book">
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input
+                                        type="text"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label>Name</label>
+                            </div>
 
-  </div>
+                            <div class="input-wrap">
+                                <input
+                                        type="password"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label>Password</label>
+                            </div>
 
-  <div class="mySlides fade">
-<!--    <img src="/static/assets/Front Cover/book9.jpg" style="width:50% ;height: 20%" alt="">-->
-            <img src="https://source.unsplash.com/1400x1050/?library" style="width: 100%" alt="book">
+                            <input type="submit" value="Sign In" class="sign-btn" />
 
-  </div>
+                            <p class="text">
+                                <a href="#">Forgot Password</a>
+                            </p>
+                        </div>
+                    </form>
 
+                    <form action="index.html" autocomplete="off" class="sign-up-form">
+                        <div class="logo">
+                            <img src="/static/assets/favicon/reading.png" alt="Ocean of Books" />
+                            <h4>Ocean of Books</h4>
+                        </div>
 
-</div>
-<br>
+                        <div class="heading">
+                            <h2>Get Started</h2>
+                            <h6>Already have an account?</h6>
+                            <a href="#" class="toggle">Sign in</a>
+                        </div>
 
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input
+                                        type="text"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label>Name</label>
+                            </div>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
+                            <div class="input-wrap">
+                                <input
+                                        type="email"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label>Email</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input
+                                        type="password"
+                                        minlength="4"
+                                        class="input-field"
+                                        autocomplete="off"
+                                        required
+                                />
+                                <label>Password</label>
+                            </div>
+
+                            <input type="submit" value="Sign Up" class="sign-btn" />
+
+                            <p class="text">
+                                By signing up, I agree to the
+                                <a href="#">Terms of Services</a> and
+                                <a href="#">Privacy Policy</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="carousel">
+                    <div class="images-wrapper">
+                        <img src="https://source.unsplash.com/600x400/?book,knowledge,reading"  class="image img-1 show" style="width: 100%" alt="book">
+                        <img src="https://source.unsplash.com/600x400/?books,education"  class="image img-2" style="width: 100%" alt="book">
+                        <img src="https://source.unsplash.com/600x400/?students"  class="image img-3" style="width: 100%" alt="book">
+                    </div>
+
+                    <div class="text-slider">
+                        <div class="text-wrap">
+                            <div class="text-group">
+                                <h2>Get ready to ready</h2>
+                                <h2>Read any book you like</h2>
+                                <h2>Invite Friends, and learn together</h2>
+                            </div>
+                        </div>
+
+                        <div class="bullets">
+                            <span class="active" data-value="1"></span>
+                            <span data-value="2"></span>
+                            <span data-value="3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- banner area -->
-        <section class="banner-area font-poppins">
+        <section class="banner-area">
             <div class="container mx-auto banner-title">
                 <div class=" text-center md-text-left">
                     <span class="d-inline  btn-virtual text-col animate__animated animate__fadeInUp">Ocean of Books</span>
@@ -138,20 +234,21 @@
                     </div>
                     <div class="py-5 animate__animated animate__fadeInUp" >
                         <p class="text-gray">We provide thousands of books on your finger tips</p>
-<!--                        <p class="text-gray">We believe that Knowledge should be free to all</p>-->
                     </div>
                     <div class="py-5 animate__animated animate__fadeInUp">
                         <a href="MainHome.html">
-                        <button class="btn btn-primary signin">Sign in</button>
+                            <button class="btn btn-primary signin">Get Started</button>
                         </a>
                     </div>
                 </div>
 
             </div>
         </section>
-
     </main>
-     <!-- @@@@@@@@@@@@  /Main Section @@@@@@@@@@@@@ -->
+
+
+
+
 
 
 <!-- @@@@@@@@@@@@  Footer Section @@@@@@@@@@@@@ -->
@@ -171,8 +268,6 @@
         <ul class="menu">
             <li><a href="#">Home</a> </li>
             <li><a href="#">About</a> </li>
-            <li><a href="#">Services</a> </li>
-            <li><a href="#">Team</a> </li>
             <li><a href="#">Contact</a> </li>
         </ul>
         <p> @2022 Ocean Of Books| Aayush Raj Joshi | All Rights Reserved</p>
@@ -186,5 +281,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/static/js/main.js"></script>
     <script src="/static/js/carousel.js"></script>
+    <script src="../../static/js/loginsignup.js"></script>
 </body>
 </html>
