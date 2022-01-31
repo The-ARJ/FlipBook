@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+.search-box{
+    position: relative;
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box.active{
+    width: 220px;
+}
+.search-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    outline: none;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box input.active{
+    opacity: 1;
+}
+.search-box input::placeholder{
+    color: #a6a6a6;
+}
+.search-box .search-icon{
+    font-family: "Nunito", sans-serif;
+    position: absolute;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    background:aqua;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #664AFF;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.search-box .search-icon.active{
+    top: 20px;
+    right: 5px;
+    height: 38px;
+    line-height: 38px;
+    width: 38px;
+    font-size: 18px;
+    background: #664AFF;
+    color: #fff;
+    transform: translateY(-50%) rotate(360deg);
+    font-family: "Nunito", sans-serif;
+
+}
+.search-box .cancel-icon{
+    position: absolute;
+    right: 20px;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: indianred;
+    cursor: pointer;
+    transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-family: "Nunito", sans-serif;
+}
+.search-box .cancel-icon.active{
+    right: -20px;
+    transform: translateY(-50%) rotate(360deg);
+}
+.search-box .search-data{
+    text-align: center;
+    padding-top: 7px;
+    color: #fff;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+.search-box .search-data.active{
+    display: none;
+}
+
+.div {
+    display: none;
+}
+
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    max-height: 215px;
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 230px;
+    overflow-y: hidden;
+    border: none;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 10000;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+    background-color: gray;
+    font-family: "Nunito", sans-serif;
+
+}
+
+.show {
+    display: block;
+}

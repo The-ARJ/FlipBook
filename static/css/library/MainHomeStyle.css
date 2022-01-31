@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 /* ------------------- Variables ------------------------ */
 body{
     background-color: #1d1b31;
     overflow-x: hidden;
-
+    width: 100%;
+    background-size: cover;
 }
 :root {
     /* text colors */
@@ -20,7 +21,9 @@ body{
     padding: 0;
     margin: 0;
 }
-
+.searchbar{
+    padding-left: 5rem !important;
+}
 a {
     text-decoration: none;
 }
@@ -171,25 +174,6 @@ li{
     z-index: -1;
 }
 
-.btn-go {
-    border-radius: 20px;
-    padding: 0.5em;
-    font-size: 1em;
-    font-family: var(--font-poppins);
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: var(--box-shadow);
-    color: white;
-    background-image: linear-gradient(to right, #ff9966, #ff5e62);
-
-
-}
-
-.btn-go:hover {
-    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
-}
 
 .container {
     width: 100%;
@@ -289,11 +273,6 @@ li{
 }
 
 
-body {
-    width: 100%;
-    /*background: url('/static/assets/backgroundpng.png') no-repeat;*/
-    background-size: cover;
-}
 
 /* ------------------- /Global Classes ------------------------ */
 
