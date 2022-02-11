@@ -17,5 +17,7 @@ urlpatterns = [
     path('adminpanel', views.adminpanel, name="adminpanel"),
     path('show/', views.show,name='show'),
 
+    path('delete_contact/<int:P_id>', views.delete_contact, name="delete_contact"),
+    path('delete_costumer/<int:P_id>', views.delete_customer, name="delete_customer"),
 
 ]
