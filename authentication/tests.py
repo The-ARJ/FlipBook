@@ -71,3 +71,19 @@ class TestViews(TestCase):
 
         # Testing Contact Delete in Contact us view
 
+    def test_case_DeleteContact_views(self):
+            client = Client()
+
+            newlycreated = Contact.objects.create(
+                {
+                    'fullname': 'name',
+                    'email': 'email',
+                    'message': 'message',
+                })
+            print(newlycreated.id)
+            url = reverse('delete_contact', newlycreated.id)
+            response = client.delete(url)
+
+            print(response)
+            self.assertEquals(response.status_code, 200)
+            self.assertRedirects(response, '/show')
