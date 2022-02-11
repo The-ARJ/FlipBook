@@ -129,13 +129,3 @@ def ordercancel(request, p_id):
     return redirect("/show/#section4")
 
 
-def productupdate(request, p_id):
-    order = Product.objects.get(id=p_id)
-    form = ProductForm(instance=order,)
-    if request.method == 'POST':
-        form = ProductForm(request.POST,instance=order)
-        if form.is_valid():
-            form.save()
-            return redirect("/show/#section3")
-    context = {'form': form}
-    return render(request, "Dashboard/edit.html",context)
