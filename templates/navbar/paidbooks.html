@@ -1,0 +1,35 @@
+{% extends 'navbar/baseforbooks.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="./.././../static/css/paidbook.css">
+<div class="gallery">
+{% for pro in product %}
+
+    <div class="content">
+        <img src="{% static 'assets/' %}{{ pro.image }}">
+        <h3>{{ pro.bookname }}</h3>
+        <H4 class="heading4">{{ pro.authorname }}.</H4>
+        <H5 class="heading5">{{ pro.bookdesc }}.</H5>
+        <h6 class="heading6">{{ pro.price }}</h6>
+
+        <ul>
+            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        </ul>
+        <a href="/billing"> <button class="buy-1">Buy Now</button></a>
+    </div>
+    {% endfor %}
+
+</div>
+<! Second Section ->
+<div class="gallery">
+
+
+
+</div>
+
+{% endblock %}
