@@ -104,8 +104,3 @@ def delete_contact(request, P_id):
     print("delete successfully")
     return redirect("/show/#section1")
 
-
-def delete_customer(request, P_id):
-    cus = Customer.objects.get(id=P_id)
-    cus.delete()
-    return redirect("/show/#section2")
