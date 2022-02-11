@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean of Books</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon/reading.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'css/library/particle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/library/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loginsignup.css' %}">
+
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+<body>
+
+<!-- @@@@@@@@@@@@  Header Section @@@@@@@@@@@@@ -->
+<header class="container-fluid">
+    <nav id="nav" class="flex font-poppins">
+
+        <div class="nav-brand">
+            <a href="/" class="text-title text-lg font-bold">Ocean of Books</a>
+        </div>
+
+        <div class="toggle-btn">
+            <button class="btn-toggle">
+                <i class="material-icons" style="font-size:40px;">subject</i>
+            </button>
+        </div>
+        <div class="collapse flex-grow">
+            <ul class="flex">
+                <li>
+                    <a href="/" class="link">Home</a>
+                </li>
+                <li>
+                    <a href="/aboutus" class="link">About Us</a>
+                </li>
+                <li>
+                    <a href="/contactus" class="link">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </nav>
+</header>
+<!-- @@@@@@@@@@@@  /Header Section @@@@@@@@@@@@@ -->
+
+
+<!-- @@@@@@@@@@@@  Main Section @@@@@@@@@@@@@ -->
+
+
+<div id="particle-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
+
+<!-- Slideshow container -->
+
+<main id="main">
+
+    <div class="box">
+        <div class="inner-box">
+            <div class="forms-wrap">
+                <form method="POST" action="" class="sign-in-form">
+                    {% csrf_token %}
+
+                    <div class="heading">
+                        <h2>Sign Up </h2>
+                    </div>
+
+                    <div class="actual-form">
+                        <div class="input-wrap">
+                            <input
+                                    type="text"
+                                    name="username"
+                                    minlength="3"
+                                    class="input-field"
+                                    autocomplete="on"
+                                    required
+                            />
+                            <label>User Name</label>
+                        </div>
+
+
+                        <div class="input-wrap">
+                            <input
+                                    type="text"
+                                    name="fullname"
+                                    minlength="7"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    required
+                            />
+                            <label>Full Name</label>
+                        </div>
+
+
+                        <div class="input-wrap">
+                            <input
+                                    type="email"
+                                    name="email"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    required
+                            />
+                            <label>Email</label>
+                        </div>
+
+
+                        <div class="input-wrap">
+                            <input
+                                    type="password"
+                                    name="password"
+                                    minlength="4"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    required
+                            />
+                            <label>Password</label>
+                        </div>
+                        <p class="text">
+                            By signing up, I agree to the
+                            <a href="#">Terms of Services</a> and
+                            <a href="#">Privacy Policy</a>
+                        </p>
+
+                        <input type="submit" value="Sign Up" class="sign-btn"/>
+                         <div class="heading">
+                        <h6>Already have an account?</h6>
+                        <a href="/" class="toggle">Sign in</a>
+                    </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="carousel">
+                <div class="images-wrapper">
+                    <img src="https://source.unsplash.com/600x400/?book,knowledge,reading" class="image img-1 show"
+                         style="width: 100%" alt="book">
+                    <img src="https://source.unsplash.com/600x400/?books,education" class="image img-2"
+                         style="width: 100%" alt="book">
+                    <img src="https://source.unsplash.com/600x400/?students" class="image img-3" style="width: 100%"
+                         alt="book">
+                </div>
+
+                <div class="text-slider">
+                    <div class="text-wrap">
+                        <div class="text-group">
+                            <h2>Get ready to read</h2>
+                            <h2>Read any book you like</h2>
+                            <h2>Invite Friends, and learn together</h2>
+                        </div>
+                    </div>
+
+                    <div class="bullets">
+                        <span class="active" data-value="1"></span>
+                        <span data-value="2"></span>
+                        <span data-value="3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner area -->
+    <section class="banner-area">
+        <div class="container mx-auto banner-title">
+            <div class=" text-center md-text-left">
+                <span class="d-inline  btn-virtual text-col animate__animated animate__fadeInUp">Ocean of Books</span>
+                <div class="py-2 branding text-light md-text-dark text-lg sm-text-xl font-bold">
+                    <span class="d-block animate__animated animate__fadeInDown animate__faster">Get the Real Feeling </span>
+                    <span class="d-block animate__animated animate__fadeInDown animate__fast">of Reading Books</span>
+                    <span class="d-block animate__animated animate__fadeInDown">Just on your Screens</span>
+                </div>
+                <div class="py-5 animate__animated animate__fadeInUp">
+                    <p class="text-gray">We provide thousands of books on your finger tips</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+
+<!-- @@@@@@@@@@@@  Footer Section @@@@@@@@@@@@@ -->
+<footer>
+    <div class="footwave">
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+    <ul class="social_icon">
+        <li><a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+        <li><a href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+        <li><a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <p> @2022 Ocean Of Books| Aayush Raj Joshi | All Rights Reserved</p>
+</footer>
+
+<!-- @@@@@@@@@@@@  /Footer Section @@@@@@@@@@@@@ -->
+<!-- scripts -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js"
+        integrity="sha512-coKEwkkVJR6lO1aL/rJeVFojNKG1DRNbAfuxcvFC98W9TYBO9TQIVFXiHBBx6dRL9+effSNEYIr/5vLe5HENVg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+        integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/carousel.js' %}"></script>
+<script src="{% static 'js/loginsignup.js' %}"></script>
+</body>
+</html>

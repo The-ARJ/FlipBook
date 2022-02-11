@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+section .booknew {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    /*box-shadow: 20px 20px 20px rgba(0,0,0,0.2);*/
+    transform-style: preserve-3d;
+    transition: 3s;
+    transform: rotateY(20deg);
+
+
+}
+
+section .booknew:hover {
+    transform: rotateY(40deg);
+    box-shadow: 0 1px 20px 5px aqua;
+
+}
+
+section .booknew:active {
+    transform: rotateY(180deg);
+}
+
+/*~~~~~~~~~~~~~~~~~~SIDE COVER PROPERTIES~~~~~~~~~~~~~~~*/
+section .booknew:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    /*background: url("side.jpg");*/
+    box-shadow: 0 1px 10px 0.6px aqua;
+    background-position: center;
+    transform: rotateY(90deg);
+
+}
+
+#stevejobs:before {
+    background: url("../assets/Side Cover/STEVE JOBS.png");
+    background-size: 60px;
+}
+
+#greatGatsby:before {
+    background: url("../assets/Side Cover/thegreatgatsby.png");
+    background-size: 60px;
+}
+
+#eisten:before {
+    background: url("../assets/Side Cover/EINSTEIN.png");
+    background-size: 60px;
+}
+
+#diaryoofyounggirl:before {
+    background: url("../assets/Side Cover/THE DIARY OF A YOUNG GIRL.png");
+    background-size: 60px;
+}
+
+#elon:before {
+    background: url("../assets/Side Cover/ELON MUSK.png");
+    background-size: 60px;
+}
+
+#malibu:before {
+    background: url("../assets/Side Cover/MALIBU RISING.png");
+    background-size: 60px;
+}
+
+#last_thing:before {
+    background: url("../assets/Side Cover/THE LAST THING HE TOLD ME.png");
+    background-size: 60px;
+}
+
+#beautiful:before {
+    background: url("../assets/Side Cover/BEAUTIFUL WORLD, WHERE ARE YOU.png");
+    background-size: 60px;
+}
+
+#hailmarry:before {
+
+
+    background: url("../assets/Side Cover/PROJECT HAIL MARY.png");
+    background-size: 60px;
+}
+
+#lore:before {
+    background: url("../assets/Side Cover/LORE OLYMPUS VOLUME ONE.png");
+    background-size: 60px;
+}
+
+#reviewed:before {
+    background: url("../assets/Side Cover/THE ANTHROPOCENE REVIEWED.png");
+
+    background-size: 60px;
+}
+
+#daughter:before {
+    background: url("../assets/Side Cover/DAUGHTER OF THE DEEP.png");
+
+    background-size: 60px;
+}
+
+#hill:before {
+    background: url("../assets/Side Cover/THE HILL WE CLIMB.png");
+
+    background-size: 60px;
+}
+
+#rule:before {
+    background: url("../assets/Side Cover/RULE OF WOLVES.png");
+
+    background-size: 60px;
+}
+
+#pain:before {
+    background: url("../assets/Side Cover/EMPIRE OF PAIN.png");
+
+    background-size: 60px;
+}
+
+/*~~~~~~~~~~~~~~~~~~SIDE COVER PROPERTIES~~~~~~~~~~~~~~~*/
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~BACK COVER AFTER PROPERTIES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+section .booknew:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background-position: center;
+    transform: rotateY(180deg) translateZ(60px);
+    border-radius: 5px 0 0 5px;
+}
+
+#stevejobs:after {
+    background: url("../assets/Back Cover/51E+feNkqaL.jpg");
+    background-size: 240px;
+}
+
+#greatGatsby:after {
+    background: url("../assets/Back Cover/273565_99_bkc.jpg");
+    background-size: 230px;
+}
+
+#eisten:after {
+    background: url("../assets/Back Cover/71gwKQMeDcL.jpg");
+    background-size: 225px;
+}
+
+#diaryoofyounggirl:after {
+    background: url("../assets/Back Cover/71hM9nerBQL.jpg");
+    background-size: 225px;
+}
+
+#elon:after {
+    background: url("../assets/Back Cover/51ve3KYUJZL.jpg");
+    background-size: 225px;
+}
+
+#malibu:after {
+    background: url("../assets/Back Cover/9781524798659_p2_v116_s550x406.jpg");
+    background-size: 225px;
+}
+
+#last_thing:after {
+    background: url("../assets/Back Cover/lastthing.jpg");
+    background-size: 240px;
+}
+
+#beautiful:after {
+    background: url("../assets/Back Cover/beautiful.jpg");
+    background-size: 240px;
+}
+
+#hailmarry:after {
+    background: url("../assets/Back Cover/91azldjydqS.jpg");
+    background-size: 240px;
+}
+
+#lore:after {
+    background: url("../assets/Back Cover/81RLsgckssL.jpg");
+    background-size: 240px;
+}
+
+#reviewed:after {
+    background: url("../assets/Back Cover/91jtZBWudGS.jpg");
+    background-size: 240px;
+}
+
+#daughter:after {
+    background: url("../assets/Back Cover/81P1UmbNnwL.jpg");
+    background-size: 240px;
+}
+
+#hill:after {
+    background: url("../assets/Back Cover/81UbvHpEjSL.jpg");
+    background-size: 240px;
+}
+
+#rule:after {
+    background: url("../assets/Back Cover/91DCdzTSPnL.jpg");
+    background-size: 240px;
+}
+
+#pain:after {
+    background: url("../assets/Back Cover/51ve3KYUJZL.jpg");
+    background-size: 240px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ /BACK COVER AFTER PROPERTIES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+section .booknew img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

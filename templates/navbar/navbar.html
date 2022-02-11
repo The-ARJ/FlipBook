@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon/reading.png' %}">
+    <title>Book</title>
+    <link rel="stylesheet" href="/static/css/library/MainHomeStyle.css">
+    <link rel="stylesheet" href="/static/css/Book_flip/book_flip.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../../static/css/dropdown.css">
+    <title>Title</title>
+</head>
+<body>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Header Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<header class="container-fluid">
+    <nav id="nav" class="flex font-poppins">
+
+        <div class="nav-brand">
+            <a href="/MainHome" class="text-title text-lg font-bold">Ocean of Books</a>
+        </div>
+
+        <div class="toggle-btn">
+            <button class="btn-toggle">
+                <i class="material-icons" style="font-size:40px;">subject</i>
+            </button>
+        </div>
+
+        <div class="collapse flex-grow">
+            <ul class="flex">
+                <li>
+                    <a href="/MainHome" class="link">Home</a>
+                </li>
+                <li>
+                    <a href="/Books" class="link">Books</a>
+                </li>
+                <li>
+                    <a href="/aboutus2" class="link">About Us</a>
+                </li>
+                <li>
+                    <a href="/contactus2" class="link">Contact Us</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+        <div class="boox">
+            <div class="user_img">
+                <a href="#" class="profile">
+                    <img src="./.././../static/assets/user.jpg">
+                </a>
+            </div>
+            <div class="drp_box">
+                <ul>
+                    <li>
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <a href="#">Edit Profile</a>
+                    </li>
+                    <li>
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <ion-icon name="settings-outline"></ion-icon>
+
+                        <a href="#">Setting</a>
+                    </li>
+                    <li>
+                        <a href="/signout">
+                            <ion-icon type="submit" name="log-in-outline"></ion-icon>
+                            Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+</header>
+{% block content  %}
+
+
+{%  endblock %}
+
+<script defer src="../../static/css/Book_flip/book_flip.js"></script>
+<script src="/static/js/MainHome.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $(".profile").click(function () {
+            $(".drp_box").toggleClass("open")
+        });
+    });
+
+</script>
+</body>
+</html>
+
+

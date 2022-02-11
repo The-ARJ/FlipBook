@@ -1,0 +1,103 @@
+{% extends 'navbar/navbar.html' %}
+{% load static %}
+
+{% block content %}
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/billing.css' %}">
+    <link rel="stylesheet" href="./.././../static/css/billing.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon/reading.png' %}">
+    <div class="container">
+        <div id="Checkout" class="inline">
+            <h1>Payment</h1>
+            <div class="card-row">
+                <span class="visa"></span>
+                <span class="mastercard"></span>
+                <span class="amex"></span>
+                <span class="discover"></span>
+            </div>
+            <form method="POST" action="/Payment_create">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="PaymentAmount">Payment amount</label>
+                    <div class="amount-placeholder">
+                        <span>$</span>
+                        <span>500.00</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="NameOnCard">Name on card</label>
+                    <input id="NameOnCard"
+                           name="fullname"
+                           class="input-field"
+                           autocomplete="off"
+                           required
+                           type="text" maxlength="25"/>
+                </div>
+                <div class="form-group">
+                    <label for="CreditCardNumber">Card number</label>
+                    <input id="CreditCardNumber" name="cardnum" class="input-field" autocomplete="off"
+                           required type="text" maxlength="25"/>
+                </div>
+                <div class="expiry-date-group form-group">
+                    <label for="ExpiryDate">Expiry date</label>
+                    <input id="ExpiryDate"
+                           name="expiry"
+                           class="input-field"
+                           autocomplete="off"
+                           required type="text" placeholder="MM / YY" maxlength="7"/>
+                </div>
+                <div class="security-code-group form-group">
+                    <label for="SecurityCode">Security code</label>
+                    <div class="input-container">
+                        <input id="SecurityCode"
+                               name="security"
+                               class="input-field"
+                               autocomplete="off"
+                               required type="number"/>
+                    </div>
+
+                </div>
+                <div class="zip-code-group form-group">
+                    <label for="ZIPCode">ZIP/Postal code</label>
+                    <div class="input-container">
+                        <input id="ZIPCode" name="postal"
+                               class="input-field"
+                               autocomplete="off"
+                               required type="text" maxlength="10"/>
+                    </div>
+                </div>
+                <div class="zip-code-group form-group">
+                    <label for="Delivery">Delivery Address</label>
+                    <div class="input-container">
+                        <input id="Delivery" class="input-field" name="delivery" autocomplete="off" required type="text"
+                               maxlength="10"/>
+                    </div>
+                </div>
+                {% if success %}
+                    <div class="">
+                        <strong>Payment Successfull ! Product will arrive in 5-7 days</strong></div>
+                {% endif %}
+                <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+                    <i class="material-icons submit-button-lock" style="font-size:20px;">paid</i>
+                    <span class="align-middle">Pay $500.00</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover();
+
+            $('#cvc').on('click', function () {
+                if ($('.cvc-preview-container').hasClass('hide')) {
+                    $('.cvc-preview-container').removeClass('hide');
+                } else {
+                    $('.cvc-preview-container').addClass('hide');
+                }
+            });
+
+        });
+    </script>
+
+{% endblock %}
