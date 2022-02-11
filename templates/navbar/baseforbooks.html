@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/css/books.css">
+    <link rel="stylesheet" href="../../static/css/book3d.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/dropdown.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon/reading.png' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../../static/css/searchbar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./.././../static/css/paidbook.css">
+    <link rel="icon" type="image/x-icon" href="../../static/assets/favicon/reading.png">
+
+
+
+    <title>Ocean of Books</title>
+</head>
+<body>
+
+<!-- @@@@@@@@@@@@  Header Section @@@@@@@@@@@@@ -->
+<header class="container-fluid">
+    <nav id="nav" class="flex font-poppins">
+
+        <div class="nav-brand">
+            <a href="/MainHome" class="text-title text-lg font-bold">Ocean of Books</a>
+        </div>
+
+        <div class="toggle-btn">
+            <button class="btn-toggle">
+                <i class="material-icons" style="font-size:40px;">subject</i>
+            </button>
+        </div>
+
+        <div class="collapse flex-grow">
+            <ul class="flex">
+                <li>
+                    <a href="/MainHome" class="link">Home</a>
+                </li>
+                <li>
+                    <a href="/Books" class="link">Books</a>
+                </li>
+                <li>
+                    <a href="/aboutus2" class="link">About Us</a>
+                </li>
+                <li>
+                    <a href="/contactus2" class="link">Contact Us</a></li>
+            </ul>
+
+        </div>
+        <div class="sdbox">
+            <div class="searchbar">
+                <!--        @@@@@@@@@@@@@@@@@@search bar@@@@@@@@@@@@@-->
+                <div class="search-box">
+                    <label for="myInput"></label><input type="text" class="dropbtn" placeholder="Search Books"
+                                                        id="myInput"
+                                                        onInput="filterFunction()">
+                    <div id="myDropdown" class="dropdown-content">
+                        <li class="lii">
+                            <a href="/steve">STEVE JOBS
+                                BY WALTER ISAACSON</a></li>
+                        <a href="/great">THE GREAT GATSBY
+                            BY F. SCOTT FITZGERALD</a>
+                        <a href="/EISTEIN">EINSTEIN
+                            BY WALTER ISSACSON</a>
+                        <a href="Diary">THE DIARY OF A YOUNG GIRL
+                            BY ANNIE FRANK</a>
+                        <a href="/Musk">ELON MUSK
+                            BY ASHLEE VANCE</a>
+                        <a href="/malibu">MALIBU RISING
+                            BY TAYLOR JENKINS REID</a>
+                        <a href="/last">THE LAST THING HE TOLD ME
+                            BY LAURA DAVE</a>
+                        <a href="/Beautiful">BEAUTIFUL WORLD, WHERE ARE YOU
+                            BY SALLY ROONEY</a>
+                        <a href="/Project">PROJECT HAIL MARY
+                            BY ANDY WEIR</a>
+                        <a href="/Lore">LORE OLYMPUS: VOLUME ONE
+                            BY RACHEL SMYTHE</a>
+                        <a href="/anthropocene">THE ANTHROPOCENE REVIEWED
+                            BY JOHN GREEN</a>
+                        <a href="/Daughter">DAUGHTER OF THE DEEP
+                            BY RICK RIORDAN</a>
+                        <a href="/Hill">THE HILL WE CLIMB
+                            BY AMANDA GORMAN</a>
+                        <a href="/Rule">RULE OF WOLVES
+                            BY LEIGGH BARDUGOO</a>
+                        <a href="/Empire">EMPIRE OF PAIN
+                            BY PATRICK RADDENN</a>
+                    </div>
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="cancel-icon">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div id="noMatches" class="dropdown-content">
+                        <a href="#">No Matches</a>
+                        <div class="search-data">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="boox">
+                <div class="user_img">
+                    <a href="#" class="profile">
+                        <img src="./.././../static/assets/user.jpg">
+                    </a>
+                </div>
+                <div class="drp_box">
+                    <ul>
+                        <li>
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <a href="#">Profile</a>
+                        </li>
+                        <li>
+                            <ion-icon name="create-outline"></ion-icon>
+                            <a href="#">Edit Profile</a>
+                        </li>
+                        <li>
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <ion-icon name="settings-outline"></ion-icon>
+
+                            <a href="#">Setting</a>
+                        </li>
+                         <li>
+                        <a href="/signout">
+                            <ion-icon type="submit" name="log-in-outline"></ion-icon>
+                            Sign Out</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="sidebar close">
+    <div class="logo-details">
+        <i class="material-icons icon_color" style="font-size:30px;color: aqua">auto_stories</i>
+        <span class="logo_name">Ocean Of Books</span>
+    </div>
+    <ul class="nav-links">
+                <li>
+            <a href="/Books">
+                <i class="material-icons " style="font-size:30px;color:aqua">auto_stories</i>
+
+                <span class="link_name">Read</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Free To Read</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/Sale">
+                <i class="material-icons" style="font-size:30px; color: aqua">library_books</i>
+                <span class="link_name">For Sale</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Books For Sale</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class="material-icons icon_color" style="font-size:30px;color: aqua">category</i>
+                    <span class="link_name">Category</span>
+                </a>
+                <i class="material-icons icon_color arrow" style="font-size:30px;color: aqua">keyboard_arrow_down</i>
+
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Category</a></li>
+                <li><a href="#">Frictional</a></li>
+                <li><a href="#">Non-Frictional</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class="material-icons" style="font-size:30px;color: aqua">pie_chart</i>
+                <span class="link_name">Progress</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">My Progress</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+<section class="home-section">
+    <div class="home-content">
+        <i class=' left-arrow'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                <path d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"></path>
+            </svg>
+        </i>
+    </div></section>
+<!-- @@@@@@@@@@@@  /Header Section @@@@@@@@@@@@@ -->
+{% block content  %}
+
+
+{%  endblock %}
+<script src="../../static/js/main.js"></script>
+<script src="../../static/js/boook.js"></script>
+<script src="../../static/js/button.js"></script>
+<script src="../../static/js/search.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../../static/js/jquery-3.5.1.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $(".profile").click(function () {
+            $(".drp_box").toggleClass("open")
+        });
+    });
+
+</script>
+</body>
+</html>
