@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
-    'products'
+    'products',
+
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,3 +127,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "oceanofbooks.web@gmail.com"
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "oceanofbooks.web@gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = "oceanofbooks@@%%web"
+

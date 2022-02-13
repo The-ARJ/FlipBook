@@ -1,12 +1,13 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon/reading.png' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href='../../static/css/dashboard.css' rel='stylesheet'>
+    <link href='./.././../static/css/dashboard.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
 </head>
@@ -77,10 +78,14 @@
                                 class="refresh">Refresh</span></a>
 
                     </div>
+                <div class="search-box">
+                    <form  method="post" action="{% url 'search' %}">
+                        {%  csrf_token %}
                     <div class="search-box">
-                        <input type="text" placeholder="Search ">
-                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Search" name="searched">
+                        <a href="{% url 'search' %}"> <i class='bx bx-search' type="submit"></i></a>
                     </div>
+                    </form></div>
 
                     <div class="profile-details">
                         <!--<img src="images/profile.jpg" alt="">-->
@@ -90,10 +95,23 @@
 
                 </nav>
 
+
                 <div class="home-content">
 
                     <div class="overview-boxes">
+                                     {% if searched %}
 
+
+                        <div class="recent-sales box">
+
+                    <h2> Results for {{ searched }} are</h2></div>
+                                         <br>
+
+                                         {% for item in items %}
+                                            <div class=" box "><a href="{% url 'searchproduct'  %}"> {{ item.id }}.{{ item.bookname }}-{{ item.authorname }}</a></div>
+                                         {%  endfor %}
+
+                    {% endif %}
 
                     </div>
 
