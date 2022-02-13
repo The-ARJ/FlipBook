@@ -5,6 +5,11 @@ from django.shortcuts import render, redirect
 from authentication.forms import CustomerForm
 from authentication.models import Customer
 from authentication.models import Contact
+from rest_framework.filters import SearchFilter, OrderingFilter
+
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
 
 # Create your views here.
 from products.models import Product, Payment
@@ -18,7 +23,6 @@ def home(request):  # login page or index page
         try:
             customer = Customer.objects.get(username=username, password=password)
             return redirect('MainHome')
-
 
         except:
             user = auth.authenticate(request, username=username, password=password)
@@ -38,10 +42,13 @@ def MainHome(request):
 def signup(request):
     if request.method == "POST":
         if request.method == "POST":
+
             print(request.POST)
             form = CustomerForm(request.POST)
             form.save()
+
             return redirect('home')
+
         else:
             form = CustomerForm()
         return render(request, "Dashboard/show.html", {'form': form})
@@ -54,6 +61,15 @@ def contactus(request):
         fullname = request.POST['name']
         email = request.POST['email']
         message = request.POST['message']
+        emailmessage = EmailMessage(
+            "New Message From " + email ,
+            message,
+            "oceanofbooks.web@gmail.com",
+            ["oceanofbooks.web@gmail.com"],
+
+        )
+        emailmessage.send()
+
         print(fullname, email, message)
         ins = Contact(fname=fullname, email=email, message=message)
         ins.save()
@@ -109,3 +125,14 @@ def delete_customer(request, P_id):
     cus = Customer.objects.get(id=P_id)
     cus.delete()
     return redirect("/show/#section2")
+
+def search(request):
+    if request.method =="POST":
+        searched = request.POST['searched']
+        items = Product.objects.filter(bookname__contains=searched)
+        return render(request, "Dashboard/show.html",{'searched':searched,'items':items})
+    else:
+        return render(request, "Dashboard/show.html")
+
+def searchproduct(request):
+    return redirect("/show/#section3")

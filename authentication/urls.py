@@ -20,4 +20,10 @@ urlpatterns = [
     path('delete_contact/<int:P_id>', views.delete_contact, name="delete_contact"),
     path('delete_costumer/<int:P_id>', views.delete_customer, name="delete_customer"),
 
+
+    path('search', views.search, name="search"),
+    path('searchproduct', views.searchproduct, name="searchproduct"),
+
+
+
 ]
