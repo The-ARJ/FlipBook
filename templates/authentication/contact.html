@@ -66,13 +66,13 @@
             <strong>Message Successfully Sent!</strong></div>
         {% endif %}
         <h2>Leave Your Message</h2>
-        <form action="/contactus" class="contact" action="" method="post">
+        <form action="/contactus" onsubmit="sendEmail();reset();return false;" class="contact" action="" method="post">
             {% csrf_token %}
             <label>
                 <input type="text" name="name" class=" text-box" placeholder="Your Full Name" required>
             </label>
             <label>
-                <input type="email" name="email" class="text-box" placeholder="Your Email Address" required>
+                <input type="email" id="email" name="email" class="text-box" placeholder="Your Email Address" required>
             </label>
             <label>
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -133,5 +133,8 @@
 <script src="{% static 'js/main.js' %}"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
 </body>
 </html>
