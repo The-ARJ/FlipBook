@@ -33,7 +33,7 @@ html, body {
 #scrollableContent {
    height: 100%;
    margin: 0em;
-   overflow-y: auto;
+   /*overflow-y: auto;*/
 }
 .sidebar .logo-details i{
   font-size: 28px;
@@ -292,7 +292,7 @@ nav .profile-details i{
 /* left box */
 .home-content .sales-boxes .recent-sales{
   width: 100%;
-  background:coral;
+  background:chocolate;
   padding: 20px 30px;
   margin: 0 50px;
   border-radius: 12px;

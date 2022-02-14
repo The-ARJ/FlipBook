@@ -23,7 +23,6 @@ urlpatterns = [
 
     path('search', views.search, name="search"),
     path('searchproduct', views.searchproduct, name="searchproduct"),
-
-
+    path('Page_next/', views.Page_next, name="Page_next"),
 
 ]

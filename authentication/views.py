@@ -5,7 +5,6 @@ from django.shortcuts import render, redirect
 from authentication.forms import CustomerForm
 from authentication.models import Customer
 from authentication.models import Contact
-from rest_framework.filters import SearchFilter, OrderingFilter
 
 from django.core.mail import EmailMessage
 from django.conf import settings
@@ -13,6 +12,7 @@ from django.template.loader import render_to_string
 
 # Create your views here.
 from products.models import Product, Payment
+from django.core.paginator import Paginator
 
 
 def home(request):  # login page or index page
@@ -62,7 +62,7 @@ def contactus(request):
         email = request.POST['email']
         message = request.POST['message']
         emailmessage = EmailMessage(
-            "New Message From " + email ,
+            "New Message From " + email,
             message,
             "oceanofbooks.web@gmail.com",
             ["oceanofbooks.web@gmail.com"],
@@ -83,7 +83,22 @@ def show(request):
     cust = Customer.objects.all()
     pro = Product.objects.all()
     buy = Payment.objects.all()
-    return render(request, "Dashboard/show.html", {'contact': cont, 'customer': cust, 'products': pro, 'order': buy})
+
+    p = Paginator(Product.objects.all(), 3)
+    page = request.GET.get('page')
+    prod = p.get_page(page)
+
+    cu = Paginator(Customer.objects.all(), 10)
+    cus = cu.get_page(page)
+
+    co = Paginator(Contact.objects.all(), 10)
+    con = co.get_page(page)
+
+    pa = Paginator(Payment.objects.all(), 10)
+    pay = pa.get_page(page)
+
+    return render(request, "Dashboard/show.html",
+                  {'contact': cont, 'customer': cust, 'products': pro, 'order': buy, "prods": prod, 'cus': cus,'con':con,'pay':pay})
 
 
 def adminpanel(request):
@@ -126,13 +141,20 @@ def delete_customer(request, P_id):
     cus.delete()
     return redirect("/show/#section2")
 
+
 def search(request):
-    if request.method =="POST":
+    if request.method == "POST":
         searched = request.POST['searched']
         items = Product.objects.filter(bookname__contains=searched)
-        return render(request, "Dashboard/show.html",{'searched':searched,'items':items})
+        return render(request, "Dashboard/show.html", {'searched': searched, 'items': items})
     else:
         return render(request, "Dashboard/show.html")
 
+
 def searchproduct(request):
+    return redirect("/show/#section3")
+
+
+# Pagination
+def Page_next(request, ):
     return redirect("/show/#section3")

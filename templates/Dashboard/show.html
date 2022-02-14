@@ -43,7 +43,7 @@
                 <span class="links_name">Payment</span>
             </a>
         </li>
-        <li class="#section5">
+        <li>
             <a href="#">
                 <i class="material-icons" style="font-size:35px;">manage_accounts</i>
                 <span class="links_name">Settings</span>
@@ -130,7 +130,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {% for cont in contact %}
+                                {% for cont in con %}
                                     <tr>
                                         <td>{{ cont.id }}</td>
                                         <td>{{ cont.fname }}</td>
@@ -154,8 +154,21 @@
                                 {% endfor %}
                                 </tbody>
 
-                            </table>
 
+                            </table>
+                            <br/>
+                            <hr><br>
+                        {% if con.has_previous %}
+                            <a href="?page=1#section1">&laquo; First</a>
+                            <a href="?page={{ con.previous_page_number }}#section1">Previous</a>
+                        {%  endif %}
+
+                        Page {{ con.number }} of {{ con.paginator.num_pages }}
+                        {%  if con.has_next %}
+
+                        <a href="?page={{ con.next_page_number }}#section1">next</a>
+                        <a href="?page={{ con.paginator.num_pages }}#section1">Last &raquo;</a>
+                        {%  endif %}
                         </div>
                     </div>
                 </div>
@@ -187,7 +200,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {% for cust in customer %}
+                                {% for cust in cus %}
                                     <tr>
                                         <td>{{ cust.id }}</td>
                                         <td>{{ cust.username }}</td>
@@ -203,6 +216,20 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
+                        <br/>
+                        <hr><br>
+                        {% if cus.has_previous %}
+                            <a href="?page=1#section2">&laquo; First</a>
+                            <a href="?page={{ cus.previous_page_number }}#section2">Previous</a>
+                        {%  endif %}
+
+                        Page {{ cus.number }} of {{ cus.paginator.num_pages }}
+                        {%  if cus.has_next %}
+
+                        <a href="?page={{ cus.next_page_number }}#section2">next</a>
+                        <a href="?page={{ cus.paginator.num_pages }}#section2">Last &raquo;</a>
+                        {%  endif %}
+
 
                         </div>
                     </div>
@@ -239,7 +266,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {% for pro in products %}
+                                {% for pro in prods %}
                                     <tr>
                                         <td>{{ pro.id }}</td>
                                         <td><img width="100px" height="100px"
@@ -263,6 +290,20 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
+                        <br/>
+                             <hr><br>
+                        {% if prods.has_previous %}
+                            <a href="?page=1#section3">&laquo; First</a>
+                            <a href="?page={{ prods.previous_page_number }}#section3">Previous</a>
+                        {%  endif %}
+
+                        Page {{ prods.number }} of {{ prods.paginator.num_pages }}
+                        {%  if prods.has_next %}
+
+                        <a href="?page={{ prods.next_page_number }}#section3">next</a>
+                        <a href="?page={{ prods.paginator.num_pages }}#section3">Last &raquo;</a>
+                        {%  endif %}
+
 
                         </div>
                     </div>
@@ -301,7 +342,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {% for buy in order %}
+                                {% for buy in pay %}
                                     <tr>
                                         <td>{{ buy.id }}</td>
                                         <td>{{ buy.fullname }}</td>
@@ -323,6 +364,19 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
+                                           <br/>
+                             <hr><br>
+                        {% if pay.has_previous %}
+                            <a href="?page=1#section4">&laquo; First</a>
+                            <a href="?page={{ pay.previous_page_number }}#section4">Previous</a>
+                        {%  endif %}
+
+                        Page {{ pay.number }} of {{ pay.paginator.num_pages }}
+                        {%  if pay.has_next %}
+
+                        <a href="?page={{ pay.next_page_number }}#section4">next</a>
+                        <a href="?page={{ pay.paginator.num_pages }}#section4">Last &raquo;</a>
+                        {%  endif %}
 
                         </div>
                     </div>
